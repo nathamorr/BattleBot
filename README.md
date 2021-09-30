@@ -4,7 +4,7 @@
 
 Création d'un robot de bataille en respectant les règles suivantes :
 - Robot roulant => Poids max 900g,
-- Dimension max: le robot doit rentrer dans un cube de 25 cm cube avec ou sans partie dépliable,
+- Dimension max: le robot doit rentrer dans un cube de 25cm avec ou sans partie dépliable,
 - Un bouton d'arrêt d'urgence présent et accessible,
 - Le robot doit être radiocommandé,
 - L'arme doit pouvoir être désactivée via la communication,
