@@ -53,3 +53,5 @@ La face arrière possède une fenêtre permettant l'accès au bouton d'arrêt.
 La plaque de toit a seulement un but esthétique et s'imbrique dans la plaque supérieure via des plots ce qui facilite l'accès à la batterie et au servomoteur.
 
 Les dessins techniques sont disponibles dans la partie **Conception 3D** du dépôt.
+
+Ashwarya ARORA / Nathan AMORRICH
