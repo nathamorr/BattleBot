@@ -3,12 +3,12 @@
 # Battle Bot project
 
 Création d'un robot de bataille en respectant les règles suivantes :
-- Robot roulant => Poids max 900g,
-- Dimension max: le robot doit rentrer dans un cube de 25cm avec ou sans partie dépliable,
-- Un bouton d'arrêt d'urgence présent et accessible,
-- Le robot doit être radiocommandé,
-- L'arme doit pouvoir être désactivée via la communication,
-- Si le contrôleur est deconnecté du robot, celui-ci s'arrête.
+- robot roulant => Poids max 900g;
+- dimension max : le robot doit rentrer dans un cube de 25cm avec ou sans partie dépliable;
+- un bouton d'arrêt d'urgence présent et accessible;
+- le robot doit être radiocommandé;
+- l'arme doit pouvoir être désactivée via la communication;
+- si le contrôleur est deconnecté du robot, celui-ci s'arrête.
 
 ## Notre robot
 
