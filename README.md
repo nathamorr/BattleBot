@@ -4,8 +4,8 @@
 
 Création d'un robot de bataille en respectant les règles suivantes :
 - robot roulant => Poids max 900g;
-- dimension max : le robot doit rentrer dans un cube de 25cm avec ou sans partie dépliable;
-- un bouton d'arrêt d'urgence présent et accessible;
+- dimension max : le robot doit rentrer dans un cube de 25cm de côté avec ou sans partie dépliable;
+- un bouton d'arrêt d'urgence est présent et accessible;
 - le robot doit être radiocommandé;
 - l'arme doit pouvoir être désactivée via la communication;
 - si le contrôleur est deconnecté du robot, celui-ci s'arrête.
@@ -14,20 +14,20 @@ Création d'un robot de bataille en respectant les règles suivantes :
 
 ### Branchement
 
-Le branchement est fait avec: 1 batterie de 14.8V, un ESP32, 4 moteurs, 1 pont en H, 1 moteur shield, 1 servomoteur, 2 abaisseurs de tension qui baisse la tension à 5V (utilisé pour alimenter presque tous les composants) et 3.3V (utilisé pour alimenter l'ESP32 pour fournir assez de puissance).
+Le branchement est fait avec : 1 batterie de 14.8V, un ESP32, 4 moteurs, 1 pont en H, 1 moteur shield, 1 servomoteur, 2 abaisseurs de tension qui baisse la tension à 5V (utilisé pour alimenter presque tous les composants) et 3.3V (utilisé pour alimenter l'ESP32 pour fournir assez de puissance).
 Il est présent dans la partie **électronique**: fichier schemas_electrique, fait sans les abaisseurs de tension.
 
 ### Motorisation
 
-Le robot possède 4 roues équipées chacune d'un moteur. Le train avant est équipé de 2 moteurs à fort couple alimentés en 14V. Le train arrière est équipé de 2 moteurs haut en RPM alimentés en 5V. Le but est de pouvoir manipuler les 2 moteurs avants individuellement: avancer, reculer, tourner à gauche ou tourner à droite. Les 2 moteurs arrières sont contrôlables par pair. Enfin, on peut contrôler les 4 moteurs ensembles  c'est-à-dire que les 4 roues avancent ou reculent en même temps.
+Le robot possède 4 roues équipées chacune d'un moteur. Le train avant est équipé de 2 moteurs à fort couple alimentés en 14V. Le train arrière est équipé de 2 moteurs haut en RPM alimentés en 5V. Le but est de pouvoir manipuler les 2 moteurs avants individuellement: avancer, reculer, tourner à gauche ou tourner à droite. Les 2 moteurs arrières sont contrôlables par paire. Enfin, on peut contrôler les 4 moteurs ensemble c'est-à-dire que les 4 roues avancent ou reculent en même temps.
 Des détails sont disponibles dans le code PS4ProgFinal dans la partie **électonique**.
 
 ### Communication / Pilotage
  
 Le robot est équipé d'un ESP32 afin de gérer la communication Bluetooth avec la manette PS4 en utilistant une librarie de aed3: https://github.com/aed3/PS4-esp32.
 
-Le robot se déplace avec le stick gauche (Stick L), qui est calclué avec les différentes valeurs obtenus en mettant le stick dans différentes positions (présent dans la partie **électonique**, fichier valeurs_Stick et Stick_L) et avec les conditions définit avec les courbes: y=x et y=-x.
-Le pilote a le choix de contrôler les trains individuellement ou contrôler les deux en même temps en fonction du mode de déplacement choisis via la manette PS4. Par exemple, si nous appuyons sur le button Circle de la manette les deux roues arrière rouleront.
+Le robot se déplace avec le stick gauche (Stick L), qui est calculé avec les différentes valeurs obtenues en mettant le stick dans différentes positions (présent dans la partie **électonique**, fichier valeurs_Stick et Stick_L) et avec les conditions définies avec les courbes: y=x et y=-x.
+Le pilote a le choix de contrôler les trains individuellement ou contrôler les deux en même temps en fonction du mode de déplacement choisi via la manette PS4. Par exemple, si nous appuyons sur le bouton Circle de la manette les deux roues arrières rouleront.
 
 Il peut appuyer sur les gâchettes : L1 ou R1 ou les deux en même temps, afin de lever ou baisser l'arme.
 
